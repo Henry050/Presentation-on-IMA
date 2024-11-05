@@ -1,0 +1,235 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #fff;
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: black;
+}
+.wrapper{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+main{
+    flex-grow: 1;
+    max-width: 1000px;
+    width: 100%;
+    margin-inline: auto;
+}
+
+.home-main {
+    margin-top: 40px;
+}
+a {
+    color: #fff;
+    text-decoration: none;
+}
+menu {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+}
+
+nav{
+    background-color: #1b1b1b;
+    max-width: 1000px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.main-content{
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+.ima_info_wrapper{
+    max-width: 540px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.ima_info_wrapper h1{
+    color: black;
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 700;
+    font-size: 40px;
+
+}
+
+.image-wrapper{
+    width: 350px;
+    height: 350px;
+    border:2px solid #9c9c9c;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.body-wrapper{
+    background-color: black;
+}
+
+.p-wrapper{
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 650;
+    font-size: 25px;
+    
+}
+
+.image-wrapper img{
+    width: 100%;
+    object-fit: cover;
+    display: inline-block;
+}
+
+.ima-btn{
+    background-color: #3f8e00;
+    width: fit-content;
+    padding: 8px 16px;
+    color: #fff;
+    border-radius: 3px;
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 700;
+    box-shadow: 0 4px 4px rgba(64, 142, 0, 0.644);
+    transition: all 0.3s ease;
+}
+
+.ima-btn:hover{
+    background: #265202;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.main-home {
+    margin-top: 100px;
+}
+
+.main-about {
+    margin-top: 20px;
+}
+
+.about-img {
+    width: 1000px;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../images/img1.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+    position: relative;
+}
+
+.about-img  p {
+    position: absolute;
+    top: 40%;
+    left: 30%;
+    transform: translate(-50%, 50%);
+    color: whitesmoke;
+    font-size: 25px;
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 750;
+}
+
+article {
+    max-width: 650px;
+    width: 100%;
+    margin-inline: auto;
+    margin-block: 40px;
+    font-size: 20px;
+    font-weight: 550;
+}
+
+.image-gallery{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3,minmax(0,1fr));
+}
+
+.photo-container {
+    position: relative; 
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.photo-container p {
+    transition: all 0.3s ease;
+    position: absolute;
+    width: fit-content;
+    font-size: 18px;
+    background-color: #3f8e00;
+    border-radius: 5px;
+    padding: 2px 5px ;
+    margin-inline: 10px;
+    font-weight: 300;
+    text-transform: capitalize;
+    bottom: 4%;
+    /* left: 5%; */
+    color: #fff;
+    opacity: 0;
+}
+
+.image-gallery img {
+    object-fit: cover;
+    display: inline-block;
+    width: 100%;
+    transition: all 0.3s ease;
+    filter: brightness(0.5) blur(1px);
+}
+
+.photo-container:hover img {
+    transform: scale(0.95);
+    filter: brightness(1) blur(0);
+} 
+
+.photo-container:hover.photo-container p  {
+    opacity: 1;
+}
+
+.photo-news {
+    color: #fff;
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 700;
+    text-align: center;
+    margin-block: 20px;
+}
+
+@media (max-width: 750px) {
+    .image-gallery{
+        grid-template-columns: repeat(2,minmax(0,1fr)) ;
+    }
+}
+
+@media (max-width: 550px) {
+    .image-gallery{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 550px) {
+    .wrapper{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 550px) {
+    .about-wrapper{
+        grid-template-columns: 1fr;
+    }
+}
